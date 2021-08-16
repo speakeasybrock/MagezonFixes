@@ -42,7 +42,7 @@ class ProductList extends \Magezon\Core\Model\ProductList {
         $this->categoryFactory          = $categoryFactory;
     }
 
-    public function getProductCollection($source = 'latest', $numberItems = 8, $order = 'newestfirst', $conditions = '', $storeId = \Magento\Store\Model\Store::DEFAULT_STORE_ID)
+    public function getProductCollection($source = 'latest', $numberItems = 8, $order = 'newestfirst', $conditions = '', $storeId = \Magento\Store\Model\Store::DEFAULT_STORE_ID, $showOutStock = true)
     {
         $store = $this->_storeManager->getStore();
         $catID = $store->getRootCategoryId();
